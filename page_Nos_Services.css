@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Racing+Sans+One&family=Sansita+Swashed:wght@300..900&family=Shrikhand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merienda", sans-serif;
+}
+
+body {
+  background:#eabefc;
+  min-height: 200vh;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 45px 100px;
+  background: linear-gradient(to right, #c734c7, #7873f5);
+  z-index: 100000;
+}
+
+header .logo img {
+  position: fixed;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-left: 0;
+  max-width: 15rem;
+  height: auto;
+  top: 2.5rem;
+  left: 8rem;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+}
+
+header .item0{
+    background: #c734c7;
+    padding: 5px 15px;
+}
+
+header ul {
+  top: 23px;
+  gap: 8px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Merienda";
+  font-weight: bolder;
+  font-size: 25px;
+  right: 1.5rem;
+  z-index: 150;
+}
+
+header ul li {
+  list-style: none;
+  border-radius: 50px;
+}
+
+header ul li a {
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header .item {
+    padding: 5px 15px;
+}
+
+header .connecter {
+  padding: 5px 15px;
+  position: relative;
+  right: -10px;
+  background: linear-gradient(to left, #ff4c28, #ff228d);
+}
+
+header .item:hover {
+  background: #b26eff;
+  color: white;
+}
+
+header .item:active {
+  background: #c734c7;
+  color: white;
+}
+
+header .connecter:hover {
+  color: #1b0274;
+}
+
+section {
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center; /* Centre les éléments horizontalement */
+  flex-direction: row;
+  gap: 3rem;
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+}
+
+.point1,
+.point2,
+.point3,
+.point4,
+.point5 {
+  position: relative;
+  width: 25rem;
+  border-radius: 30px;
+  background: white;
+  justify-items: center;
+  padding: 20px 20px;
+}
+
+.point1 video, 
+.point4 video,
+.point5 video {
+  position: relative;
+  width: 20rem;
+  height: 12rem;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.point1 h3,
+.point2 h3,
+.point3 h3,
+.point4 h3,
+.point5 h3 {
+  font-size: 25px;
+  border-radius: 50px;
+  color: white;
+  background: rgb(85, 79, 233);
+  text-align: center;
+  padding: 7px 15px;
+  margin-bottom: 20px;
+}
+
+.point1 p,
+.point2 p,
+.point3 p,
+.point4 p,
+.point5 p {
+  font-size: 23px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.point1 input,
+.point2 input,
+.point3 input,
+.point4 input,
+.point5 input {
+  font-size: 25px;
+  color: white;
+  background: rgb(85, 79, 233);
+  border-radius: 50px;
+  border: none;
+  padding: 7px 15px;
+}
+
+.grpimg1 img,
+.grpimg2 img{
+  width: 7rem;
+  margin-bottom: 35px;
+  border-radius: 100%;
+}
+
+.grpimg1 .img3 {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+}
+
+.grpimg1 img:hover,
+.grpimg2 img:hover{
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.point1 input:hover,
+.point2 input:hover,
+.point3 input:hover,
+.point4 input:hover,
+.point5 input:hover {
+  transform: scale(1.1);
+  transform-origin: center;
+  background: rgb(117, 117, 247);
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Styles pour le footer */
+.section-footer {
+  background: linear-gradient(to right, #641a64, #3d3b7e);
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.footer-entête {
+  border-bottom: 1px solid #373636;
+  margin-bottom: 50px;
+}
+
+/* Cible spécifiquement les éléments de la .row */
+.row {
+  display: flex;
+  gap: 80px;
+  /* Espacement de 60 pixels entre chaque div */
+  justify-content: center;
+  /* Centre les éléments horizontalement */
+}
+
+.single-cta {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Cible spécifiquement les .single-cta éléments */
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+}
+
+/* Cible spécifiquement les .cta-text éléments */
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+/* Cible spécifiquement les .cta-text h4 éléments */
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Cible spécifiquement les .cta-text span éléments */
+.cta-text span {
+  color: black;
+  font-size: 15px;
+}
+
+.footer-content {
+  position: relative;
+  padding: 0 3rem;
+  z-index: 2;
+}
+
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  max-width: 400px;
+}
+
+.footer-text p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: black;
+  line-height: 28px;
+}
+
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+
+.facebook-bg {
+  background: #3B5998;
+}
+
+.twitter-bg {
+  background: #55ACEE;
+}
+
+.instagram-bg {
+  background: #DD4B39;
+}
+
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.footer-widget-heading1 h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.footer-widget1 {
+  position: relative;
+  right: 4rem;
+}
+
+
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+
+.footer-widget-heading1 h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+
+
+.footer-widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Espacement entre les éléments */
+}
+
+.footer-widget ul li {
+  width: 40%;
+  /* Chaque élément prendra environ la moitié de la largeur disponible */
+  margin-bottom: 12px;
+}
+
+.footer-widget ul li a {
+  color: black;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.footer-widget ul li a:hover {
+  color: #ff5e14;
+}
+
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  width: 22rem; /* Ajuster la largeur à 100% pour occuper tout l'espace disponible */
+  padding: 15px 30px;
+  background: black;
+  border-radius: 30px;
+  color: white;
+  border-style: none;
+}
+
+.subscribe-form input:focus {
+  outline: none;
+  border: none;
+}
+
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #ff5e14;
+  padding: 12px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+.copyright-area {
+  background: black;
+  padding: 25px 0;
+  position: relative;
+  top: 4rem;
+}
+
+.copyright-text p {
+  position: relative;
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+  right: 12rem;
+}
+
+.footer-menu ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  left: 13rem;
+}
+
+.footer-menu ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer-menu ul li a {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: none;
+}
+
+.footer-menu ul li:hover a {
+  color: #ff5e14;
+}

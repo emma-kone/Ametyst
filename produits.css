@@ -1,0 +1,999 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Oleo+Script:wght@400;700&family=Oswald:wght@200..700&family=Racing+Sans+One&family=Sansita+Swashed:wght@300..900&family=Shrikhand&display=swap');
+
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:#eabefc;
+    min-height: 100vh; /* Pour s'assurer que le dégradé couvre toute la hauteur */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8rem 0;
+    background: linear-gradient(to right, #c734c7, #7873f5);
+    z-index: 1;
+  }
+  
+.Amethyst img { 
+    position: fixed;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+    max-width: 15rem;
+    height: auto;
+    top: 2.5rem;
+    left: 8rem;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+}
+
+header .item0{
+    background: #c734c7;
+    padding: 5px 15px;
+}
+
+header ul {
+  top: 23px;
+  gap: 8px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Merienda";
+  font-weight: bolder;
+  font-size: 25px;
+  right: 1.5rem;
+  z-index: 150;
+}
+
+header ul li {
+  list-style: none;
+  border-radius: 50px;
+}
+
+header ul li a {
+  border-radius: 50px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header .item {
+    padding: 5px 15px;
+}
+
+header .connecter {
+  padding: 5px 15px;
+  position: relative;
+  right: -10px;
+  background: linear-gradient(to left, #ff4c28, #ff228d);
+}
+
+header .item:hover {
+  background: #b26eff;
+  color: white;
+}
+
+header .item:active {
+  background: #c734c7;
+  color: white;
+}
+
+header .connecter:hover {
+  color: #1b0274;
+}
+
+.navigation ul li.active {
+    background: #c734c7;
+    color: white;  
+}
+
+.Section1 ul {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8rem;
+    left: 50%;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 25px;
+    transform: translateX(-50%);
+    gap: 10px;
+    font-family: "Merienda";
+    font-weight: bolder;
+    font-size: 25px;
+    z-index: 150;
+}
+  
+.Section1 ul li {
+    list-style: none;
+    border-radius: 50px;
+}
+  
+.Section1 ul li a {
+    border-radius: 50px;
+    padding: 2px 15px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+  
+.a1:hover {
+    background: black;
+    color: white;
+}
+.a2:hover {
+    background-color: red;
+    color: white;
+}
+.a3:hover {
+    background-color: rgb(4, 182, 4);
+    color: white;
+}
+.a4:hover {
+    background-color: rgb(5, 5, 177);
+    color: white;
+}
+
+.connecter:hover {
+    color: #1b0274;
+}
+
+.a1.active {
+    background: black;
+    color: white;
+}
+.a2.active {
+    background-color: red;
+    color: white;
+}
+.a3.active {
+    background-color: rgb(4, 182, 4);
+    color: white;
+}
+.a4.active {
+    background-color: rgb(5, 5, 177);
+    color: white;
+}
+
+
+
+
+#Netflix {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    position: absolute; /* Pour permettre le défilement */
+    top: 16rem; /* Ajustez cette valeur pour rendre l'élément visible */
+    left: 50%;
+    width: 90%;
+    height: 59rem;
+    border-radius: 30px;
+    background: rgb(248, 155, 155);
+    transform: translate(-50%, 0);
+    gap: 3rem; /* Ajoute un espacement de 2rem entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+}
+
+.Netflix1, 
+.Netflix2, 
+.Netflix3, 
+.Netflix4 {
+    background: black;
+    top: 1rem;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Netflix1 img, 
+.Netflix2 img, 
+.Netflix3 img, 
+.Netflix4 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Netflix1 h3, 
+.Netflix2 h3, 
+.Netflix3 h3, 
+.Netflix4 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Netflix1 p, 
+.Netflix2 p, 
+.Netflix3 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: rgb(255, 0, 0);
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Netflix4 p, 
+.Netflix8 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: rgb(255, 0, 0);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.Netflix1 p:hover, 
+.Netflix2 p:hover, 
+.Netflix3 p:hover, 
+.Netflix4 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+.Netflix5, 
+.Netflix6, 
+.Netflix7, 
+.Netflix8 {
+    background: black;
+    top: -10px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Netflix5 img, 
+.Netflix6 img, 
+.Netflix7 img, 
+.Netflix8 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Netflix5 h3, 
+.Netflix6 h3, 
+.Netflix7 h3, 
+.Netflix8 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Netflix5 p, 
+.Netflix6 p, 
+.Netflix7 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: rgb(255, 0, 0);
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Netflix5 p:hover, 
+.Netflix6 p:hover, 
+.Netflix7 p:hover, 
+.Netflix8 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.Netflix9, 
+.Netflix10, 
+.Netflix11, 
+.Netflix12 {
+    background: black;
+    top: -35px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Netflix9 img, 
+.Netflix10 img, 
+.Netflix11 img, 
+.Netflix12 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Netflix9 h3, 
+.Netflix10 h3, 
+.Netflix11 h3, 
+.Netflix12 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Netflix9 p, 
+.Netflix10 p, 
+.Netflix11 p, 
+.Netflix12 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: rgb(255, 0, 0);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Netflix9 p:hover, 
+.Netflix10 p:hover, 
+.Netflix11 p:hover, 
+.Netflix12 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+#Spotify {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    position: absolute; /* Pour permettre le défilement */
+    top: 80rem; /* Ajustez cette valeur pour rendre l'élément visible */
+    left: 50%;
+    width: 90%;
+    height: 40rem;
+    border-radius: 30px;
+    background: rgb(148, 250, 139);
+    transform: translate(-50%, 0);
+    gap: 3rem; /* Ajoute un espacement de 2rem entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+}
+
+.Spotify1, 
+.Spotify2, 
+.Spotify3, 
+.Spotify4 {
+    background: #1ece5b;
+    top: 20px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Spotify5, 
+.Spotify6, 
+.Spotify7, 
+.Spotify8 {
+    background: #1ece5b;
+    top: -20px;
+    left: 1px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Spotify1 img, 
+.Spotify2 img, 
+.Spotify3 img, 
+.Spotify4 img, 
+.Spotify5 img, 
+.Spotify6 img, 
+.Spotify7 img, 
+.Spotify8 img {
+    position: absolute;
+    width: 12rem;
+    border-radius: 100px;
+    left: 1.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 20px;
+}
+
+.Spotify3 h3, 
+.Spotify4 h3, 
+.Spotify5 h3, 
+.Spotify6 h3, 
+.Spotify7 h3, 
+.Spotify8 h3 {
+    color: white;
+    position: absolute;
+    left: 5rem;
+    top: 9.3rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+.Spotify1 h3 {
+    color: white;
+    position: absolute;
+    left: 1.7rem;
+    top: 9.3rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;   
+}
+.Spotify2 h3 {
+    color: white;
+    position: absolute;
+    left: 3.5rem;
+    top: 9.3rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Spotify1 p, 
+.Spotify2 p, 
+.Spotify3 p {
+    color: #045821;
+    position: absolute;
+    left: 2.5rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Spotify4 p, 
+.Spotify5 p, 
+.Spotify6 p, 
+.Spotify7 p, 
+.Spotify8 p {
+    color: #045821;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Spotify1 p:hover, 
+.Spotify2 p:hover, 
+.Spotify3 p:hover, 
+.Spotify4 p:hover, 
+.Spotify5 p:hover, 
+.Spotify6 p:hover, 
+.Spotify7 p:hover, 
+.Spotify8 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+#Prime {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    position: absolute; /* Pour permettre le défilement */
+    top: 125rem; /* Ajustez cette valeur pour rendre l'élément visible */
+    left: 50%;
+    width: 90%;
+    height: 59rem;
+    border-radius: 30px;
+    background: rgb(136, 212, 247);
+    transform: translate(-50%, 0);
+    gap: 3rem; /* Ajoute un espacement de 2rem entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+}
+
+.Prime1, 
+.Prime2, 
+.Prime3, 
+.Prime4 {
+    background: #039cfc;
+    top: 1rem;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Prime1 img, 
+.Prime2 img, 
+.Prime3 img, 
+.Prime4 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Prime1 h3, 
+.Prime2 h3, 
+.Prime3 h3, 
+.Prime4 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Prime1 p, 
+.Prime2 p, 
+.Prime3 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: black;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+.Prime4 p, 
+.Prime8 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: black;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.Prime1 p:hover, 
+.Prime2 p:hover, 
+.Prime3 p:hover, 
+.Prime4 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+.Prime5, 
+.Prime6, 
+.Prime7, 
+.Prime8 {
+    background: #039cfc;
+    top: -10px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Prime5 img, .Prime6 img, .Prime7 img, .Prime8 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Prime5 h3, .Prime6 h3, .Prime7 h3, .Prime8 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Prime5 p, .Prime6 p, .Prime7 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: black;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Prime5 p:hover, .Prime6 p:hover, .Prime7 p:hover, .Prime8 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+.Prime9, .Prime10, .Prime11, .Prime12 {
+    background: #039cfc;
+    top: -35px;
+    width: 15rem;
+    height: 17rem;
+    border-radius: 30px;
+    position: relative; /* Ajusté de fixed à relative pour permettre le flex */
+    flex-shrink: 0; /* Empêche les éléments de rétrécir */
+}
+
+.Prime9 img, .Prime10 img, .Prime11 img, .Prime12 img {
+    position: absolute;
+    width: 10rem;
+    border-radius: 30px;
+    left: 2.5rem; /* Ajusté pour centrer l'image dans le conteneur */
+    top: 1px;
+}
+
+.Prime9 h3, .Prime10 h3, .Prime11 h3, .Prime12 h3 {
+    color: white;
+    position: absolute;
+    left: 3rem;
+    top: 9.5rem;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.Prime9 p, .Prime10 p, .Prime11 p, .Prime12 p {
+    color: white;
+    position: absolute;
+    left: 2.2rem; /* Ajusté pour centrer le bouton dans le conteneur */
+    top: 12.5rem;
+    background: black;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.Prime9 p:hover, .Prime10 p:hover, .Prime11 p:hover, .Prime12 p:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+}
+
+
+
+/* Styles pour le footer */
+.section-footer {
+    font-family: "merienda";
+    background: linear-gradient(to right, #641a64, #3d3b7e);
+    position: relative;
+    width: 100%;
+    top: 200rem;
+    min-height: 400px;
+  }
+  
+  .footer-entête {
+    border-bottom: 1px solid #373636;
+    margin-bottom: 50px;
+  }
+  
+  /* Cible spécifiquement les éléments de la .row */
+  .row {
+    display: flex;
+    gap: 80px;
+    /* Espacement de 60 pixels entre chaque div */
+    justify-content: center;
+    /* Centre les éléments horizontalement */
+  }
+  
+  .single-cta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Cible spécifiquement les .single-cta éléments */
+  .single-cta i {
+    color: #ff5e14;
+    font-size: 30px;
+    float: left;
+  }
+  
+  /* Cible spécifiquement les .cta-text éléments */
+  .cta-text {
+    padding-left: 15px;
+    display: inline-block;
+  }
+  
+  /* Cible spécifiquement les .cta-text h4 éléments */
+  .cta-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  /* Cible spécifiquement les .cta-text span éléments */
+  .cta-text span {
+    color: black;
+    font-size: 15px;
+  }
+  
+  .footer-content {
+    position: relative;
+    padding: 0 3rem;
+    z-index: 2;
+  }
+  
+  .footer-pattern img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 330px;
+    background-size: cover;
+    background-position: 100% 100%;
+  }
+  
+  .footer-logo {
+    margin-bottom: 30px;
+  }
+  
+  .footer-logo img {
+    max-width: 400px;
+  }
+  
+  .footer-text p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: black;
+    line-height: 28px;
+  }
+  
+  .footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  
+  .footer-social-icon i {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+  }
+  
+  .facebook-bg {
+    background: #3B5998;
+  }
+  
+  .twitter-bg {
+    background: #55ACEE;
+  }
+  
+  .instagram-bg {
+    background: #DD4B39;
+  }
+  
+  .footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .footer-widget-heading1 h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .footer-widget1 {
+    position: relative;
+    right: 4rem;
+  }
+  
+  
+  .footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+  }
+  
+  .footer-widget-heading1 h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    height: 2px;
+    width: 50px;
+    background: #ff5e14;
+  }
+  
+  
+  .footer-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espacement entre les éléments */
+  }
+  
+  .footer-widget ul li {
+    width: 40%;
+    /* Chaque élément prendra environ la moitié de la largeur disponible */
+    margin-bottom: 12px;
+  }
+  
+  .footer-widget ul li a {
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+  }
+  
+  .footer-widget ul li a:hover {
+    color: #ff5e14;
+  }
+  
+  .subscribe-form {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .subscribe-form input {
+    font-family: "merienda";
+    width: 22rem; /* Ajuster la largeur à 100% pour occuper tout l'espace disponible */
+    padding: 15px 30px;
+    background: black;
+    border-radius: 30px;
+    color: white;
+    border-style: none;
+  }
+  
+  .subscribe-form input:focus {
+    outline: none;
+    border: none;
+  }
+  
+  .subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  .subscribe-form button i {
+    color: #fff;
+    font-size: 22px;
+    transform: rotate(-6deg);
+  }
+  
+  .copyright-area {
+    background: black;
+    padding: 25px 0;
+    position: relative;
+    top: 4rem;
+  }
+  
+  .copyright-text p {
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    color: #878787;
+    right: 12rem;
+  }
+  
+  .footer-menu ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    left: 13rem;
+  }
+  
+  .footer-menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .footer-menu ul li a {
+    font-size: 14px;
+    color: #878787;
+    text-decoration: none;
+  }
+  
+  .footer-menu ul li:hover a {
+    color: #ff5e14;
+  }
+    
+.header .menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+}

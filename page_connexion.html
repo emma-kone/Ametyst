@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - AMETHYST</title>
+    <link rel="stylesheet" type="text/css" href="page_connexion.css">
+</head>
+<body>
+    <div class="container" id="main">
+        <div class="Amethyst">
+            <img src="/images/LOGO_ameth-removebg-preview.png" alt="">
+        </div>
+        <div class="Inscription">
+            <form action="inscription.php" method="POST">
+                <h1>S'inscrire</h1>
+                <div class="resaux_sociaux"> 
+                    <a href="#" class="social"> 
+                        <img src="/images/Google__G__logo.svg.png" alt="Google" id="googleSignUp"> 
+                    </a> 
+                </div> 
+                <p>ou utiliser votre numéro de téléphone</p>
+                <input type="text" name="nom" placeholder="Nom" required="">
+                <input type="text" name="prenoms" placeholder="Prénoms" required="">
+                <input type="tel" id="phone" name="phone" placeholder=" " value="(+225) " required>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="MotPass" placeholder="Mot de passe" required="">
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+        <div class="Connexion">
+            <form action="connexion.php" method="POST">
+                <h1>Se connecter</h1>
+                <div class="resaux_sociaux"> 
+                    <a href="#" class="social"> 
+                        <img src="/images/Google__G__logo.svg.png" alt="Google" id="googleSignIn"> 
+                    </a> 
+                </div> 
+                <p>ou utiliser votre e-mail ou votre numéro de téléphone</p>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="MotPass" placeholder="Mot de passe" required="">
+                <a href="#">Mot de passe oublié ?</a>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+
+        <div class="partie_changement">
+            <div class="changement">
+                <div class="changement_gauche">
+                    <h1>Bon retour !</h1>
+                    <p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                    <button id="connecter">Connexion</button>
+                </div>
+                <div class="changement_droit">
+                    <h1>Bonjour mon ami</h1>
+                    <p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                    <button id="inscrire">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const inscrireButton = document.getElementById('inscrire');
+        const connecterButton = document.getElementById('connecter');
+        const main = document.getElementById('main');
+
+        connecterButton.addEventListener('click', () => {
+            main.classList.remove("right-panel-active")
+        });
+        inscrireButton.addEventListener('click', () => {
+            main.classList.add("right-panel-active")
+        });
+
+        document.getElementById('googleSignUp').onclick = function() {
+            var client_id = '250704519938-f6vdulhfnv395n1tneakju1bv30b3g74.apps.googleusercontent.com';
+            var redirect_uri = 'http://127.0.0.1:5500/page_accueil.html';
+            var state = 'security_token%3D123456';
+            var scope = 'email%20profile';
+            var response_type = 'code';
+
+            var auth_url = `https://accounts.google.com/o/oauth2/v2/auth?scope=${scope}&response_type=${response_type}&state=${state}&redirect_uri=${redirect_uri}&client_id=${client_id}`;
+            window.location.href = auth_url;
+        };
+
+        document.getElementById('googleSignIn').onclick = function() {
+            var client_id = '250704519938-f6vdulhfnv395n1tneakju1bv30b3g74.apps.googleusercontent.com';
+            var redirect_uri = 'http://127.0.0.1:5500/page_accueil.html';
+            var state = 'security_token%3D123456';
+            var scope = 'email%20profile';
+            var response_type = 'code';
+
+            var auth_url = `https://accounts.google.com/o/oauth2/v2/auth?scope=${scope}&response_type=${response_type}&state=${state}&redirect_uri=${redirect_uri}&client_id=${client_id}`;
+            window.location.href = auth_url;
+        };
+    </script>
+    <script src="server.js"></script>
+</body>
+</html>
